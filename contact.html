@@ -5,38 +5,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontaktlar</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 300px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .branch {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    .contact-item img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .contact-item a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: #3498db;
+    }
+
+    .contact-item a:active {
+      color: #e74c3c;
+    }
+
+  </style>
 </head>
 
 <body>
-  <div style="display: flex; align-items: center; height: 100vh; justify-content: center; flex-direction: column;" class="container">
+  <div class="container">
     <h1>Murojaat uchun</h1>
-    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"> 
-      <h2 style="font-size: 30px;">Birinchi fillial</h2>
-      <div style="display: flex; flex-direction: column;">
-        <div style="display: flex; align-items: center; gap: 10px;">
+
+    <!-- Birinchi fillial -->
+    <div class="branch">
+      <h2>Birinchi fillial</h2>
+      <div class="contact-info">
+        <div class="contact-item">
           <img src="./images/tel.svg" alt="tel">
-          <a style="text-decoration: none; font-size: 20px; color: black;" href="tel:+998914472619" class="link">+998 98 362 97 97</a>
+          <a href="tel:+998914472619">+998 98 362 97 97</a>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
+        <div class="contact-item">
           <img src="./images/tel.svg" alt="tel">
-          <a style="text-decoration: none; font-size: 20px; color: black;" href="tel:+998999370327" class="link">+998 71 289 00 69</a>
-        </div>
-      </div>
-    </div>
-    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"> 
-      <h2 style="font-size: 30px;">Ikkinchi fillial</h2>
-      <div style="display: flex; flex-direction: column;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <img src="./images/tel.svg" alt="tel">
-          <a style="text-decoration: none; font-size: 20px; color: black;" href="tel:+998914472619" class="link">+998 91 447 26 19</a>
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
-          <img src="./images/tel.svg" alt="tel">
-          <a style="text-decoration: none; font-size: 20px; color: black;" href="tel:+998999370327" class="link">+998 99 937 03 27</a>
+          <a href="tel:+998999370327">+998 71 289 00 69</a>
         </div>
       </div>
     </div>
+
+    <!-- Ikkinchi fillial -->
+    <div class="branch">
+      <h2>Ikkinchi fillial</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="./images/tel.svg" alt="tel">
+          <a href="tel:+998914472619">+998 91 447 26 19</a>
+        </div>
+        <div class="contact-item">
+          <img src="./images/tel.svg" alt="tel">
+          <a href="tel:+998999370327">+998 99 937 03 27</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </body>
 
