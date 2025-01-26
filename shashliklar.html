@@ -5,24 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ovqatlar</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .product {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 20px;
+        }
+        .product img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product h3 {
+            margin-top: 10px;
+            color: #ff6347;
+        }
+        .product p {
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
-        class="container">
-        <h1>Shashliklar</h1>
-        <div class="menu">
-            <div style="width: 280px; overflow: hidden; border-radius: 20px; height: 300px;" class="food-item">
-                <img width="280px" height="180px" src="./images/shashlik.jpg" alt="Olma" class="food-image">
-                <h3 style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">
-                    Mol jaz</h3>
-                <strong
-                    style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi:20.000</strong>
+    <div class="container">
+        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="container">
+            <h1 id="title">Shashliklar</h1>
+            <div class="menu">
+                <div style="width: 280px; overflow: hidden; border-radius: 20px; height: 300px;" class="food-item">
+                    <img width="280px" height="180px" src="./images/shashlik.jpg" alt="Mol jaz" class="food-image">
+                    <h3 style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;" id="food-name">Mol jaz</h3>
+                    <strong style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;" id="price">Narxi: 20.000</strong>
+                </div>
             </div>
+            <a style="text-decoration: none; font-size: 20px; color: black;" href="contact.html" class="link" id="contact-link">Murojaat uchun</a>
         </div>
-        <a style="text-decoration: none; font-size: 20px; color: black;" href="contact.html" class="link">Murojaat uchun</a>
     </div>
+
+    <script>
+        window.onload = function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz';
+            updateContent(savedLanguage);
+        };
+
+        function updateContent(lang) {
+            const title = document.getElementById('title');
+            const foodName = document.getElementById('food-name');
+            const price = document.getElementById('price');
+            const contactLink = document.getElementById('contact-link');
+
+            if (lang === 'uz') {
+                title.textContent = "Shashliklar";
+                foodName.textContent = "Mol jaz";
+                price.textContent = "Narxi: 20.000";
+                contactLink.textContent = "Murojaat uchun";
+            } else if (lang === 'ru') {
+                title.textContent = "Шашлыки";
+                foodName.textContent = "Мол жареный";
+                price.textContent = "Цена: 20.000";
+                contactLink.textContent = "Для связи";
+            }
+        }
+    </script>
 </body>
 
 </html>

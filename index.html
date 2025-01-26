@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/png.jpg">
   <title>Ko'p Tillik Navigatsiya</title>
   <style>
     body {
@@ -113,14 +114,10 @@
         links: ["1-Блюда", "2-Блюда", "Шашлыки", "Салаты", "Для связи"]
       }
     };
-
-    // Change language and save to localStorage
     function changeLanguage(lang) {
-      localStorage.setItem('selectedLanguage', lang); // Save language
+      localStorage.setItem('selectedLanguage', lang);
       updateContent(lang);
     }
-
-    // Update content based on selected language
     function updateContent(lang) {
       document.getElementById('title').textContent = translations[lang].title;
       document.getElementById('menu-title').textContent = translations[lang].menuTitle;
@@ -129,10 +126,8 @@
         links[index].textContent = text;
       });
     }
-
-    // Set language on page load
     window.onload = function () {
-      const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; // Default to Uzbek
+      const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; 
       updateContent(savedLanguage);
     };
 

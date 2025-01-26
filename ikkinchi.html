@@ -33,20 +33,43 @@
 </head>
 <body>
     <div class="container">
-        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
-            class="container">
-            <h1>2-Ovqatlar</h1>
+        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="container">
+            <h1 id="title">2-Ovqatlar</h1>
             <div class="menu">
                 <div style="width: 280px; overflow: hidden; border-radius: 20px; height: 300px;" class="food-item">
-                    <img width="280px" height="180px" src="./images/vaguri.jpg" alt="Olma" class="food-image">
-                    <h3 style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">
-                        Vaguri</h3>
-                    <strong
-                        style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi:220.000</strong>
+                    <img width="280px" height="180px" src="./images/vaguri.jpg" alt="Vaguri" class="food-image">
+                    <h3 style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;" id="food-name">Vaguri</h3>
+                    <strong style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;" id="price">Narxi: 220.000</strong>
                 </div>
             </div>
-            <a style="text-decoration: none; font-size: 20px; color: black;" href="contact.html" class="link">Murojaat uchun</a>
+            <a style="text-decoration: none; font-size: 20px; color: black;" href="contact.html" class="link" id="contact-link">Murojaat uchun</a>
         </div>
     </div>
+
+    <script>
+        window.onload = function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; 
+            updateContent(savedLanguage);
+        };
+
+        function updateContent(lang) {
+            const title = document.getElementById('title');
+            const foodName = document.getElementById('food-name');
+            const price = document.getElementById('price');
+            const contactLink = document.getElementById('contact-link');
+
+            if (lang === 'uz') {
+                title.textContent = "2-Ovqatlar";
+                foodName.textContent = "Vaguri";
+                price.textContent = "Narxi: 220.000";
+                contactLink.textContent = "Murojaat uchun";
+            } else if (lang === 'ru') {
+                title.textContent = "2-Блюда";
+                foodName.textContent = "Вагури";
+                price.textContent = "Цена: 220.000";
+                contactLink.textContent = "Для связи";
+            }
+        }
+    </script>
 </body>
 </html>

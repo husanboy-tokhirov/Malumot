@@ -2,122 +2,155 @@
 <html lang="uz">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontaktlar</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktlar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    .container {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 300px;
-    }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+        }
 
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      color: #333;
-      margin-bottom: 20px;
-    }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .branch {
-      margin-bottom: 40px;
-    }
+        .branch {
+            margin-bottom: 40px;
+        }
 
-    h2 {
-      font-size: 28px;
-      color: #2c3e50;
-      margin-bottom: 15px;
-    }
+        h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
 
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-    }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
 
-    h2{
-      text-align: center;
-    }
+        h2 {
+            text-align: center;
+        }
 
-    .contact-item img {
-      width: 20px;
-      height: 20px;
-    }
+        .contact-item img {
+            width: 20px;
+            height: 20px;
+        }
 
-    .contact-item a {
-      text-decoration: none;
-      font-size: 20px;
-      color: #2c3e50;
-      transition: color 0.3s ease;
-    }
+        .contact-item a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #2c3e50;
+            transition: color 0.3s ease;
+        }
 
-    .contact-item a:hover {
-      color: #3498db;
-    }
+        .contact-item a:hover {
+            color: #3498db;
+        }
 
-    .contact-item a:active {
-      color: #e74c3c;
-    }
+        .contact-item a:active {
+            color: #e74c3c;
+        }
 
-  </style>
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Murojaat uchun</h1>
+    <div class="container">
+        <h1 id="contact-title">Murojaat uchun</h1>
+        <div class="branch">
+            <h2 id="branch1">Birinchi fillial</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="./images/tel.svg" alt="tel">
+                    <a href="tel:+998914472619" id="tel1">+998 98 362 97 97</a>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/tel.svg" alt="tel">
+                    <a href="tel:+998999370327" id="tel2">+998 71 289 00 69</a>
+                </div>
+            </div>
+        </div>
 
-    <!-- Birinchi fillial -->
-    <div class="branch">
-      <h2>Birinchi fillial</h2>
-      <div class="contact-info">
-        <div class="contact-item">
-          <img src="./images/tel.svg" alt="tel">
-          <a href="tel:+998914472619">+998 98 362 97 97</a>
+        <!-- Ikkinchi fillial -->
+        <div class="branch">
+            <h2 id="branch2">Ikkinchi fillial</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="./images/tel.svg" alt="tel">
+                    <a href="tel:+998914472619" id="tel3">+998 91 447 26 19</a>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/tel.svg" alt="tel">
+                    <a href="tel:+998999370327" id="tel4">+998 99 937 03 27</a>
+                </div>
+            </div>
         </div>
-        <div class="contact-item">
-          <img src="./images/tel.svg" alt="tel">
-          <a href="tel:+998999370327">+998 71 289 00 69</a>
-        </div>
-      </div>
     </div>
 
-    <!-- Ikkinchi fillial -->
-    <div class="branch">
-      <h2>Ikkinchi fillial</h2>
-      <div class="contact-info">
-        <div class="contact-item">
-          <img src="./images/tel.svg" alt="tel">
-          <a href="tel:+998914472619">+998 91 447 26 19</a>
-        </div>
-        <div class="contact-item">
-          <img src="./images/tel.svg" alt="tel">
-          <a href="tel:+998999370327">+998 99 937 03 27</a>
-        </div>
-      </div>
-    </div>
+    <script>
+        window.onload = function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; 
+            updateContent(savedLanguage);
+        };
 
-  </div>
+        function updateContent(lang) {
+            const title = document.getElementById('contact-title');
+            const branch1 = document.getElementById('branch1');
+            const branch2 = document.getElementById('branch2');
+            const tel1 = document.getElementById('tel1');
+            const tel2 = document.getElementById('tel2');
+            const tel3 = document.getElementById('tel3');
+            const tel4 = document.getElementById('tel4');
+            const backLink = document.getElementById('back-link');
+
+            if (lang === 'uz') {
+                title.textContent = "Murojaat uchun";
+                branch1.textContent = "Birinchi fillial";
+                branch2.textContent = "Ikkinchi fillial";
+                tel1.textContent = "+998 98 362 97 97";
+                tel2.textContent = "+998 71 289 00 69";
+                tel3.textContent = "+998 91 447 26 19";
+                tel4.textContent = "+998 99 937 03 27";
+            } else if (lang === 'ru') {
+                title.textContent = "Для связи";
+                branch1.textContent = "Первое отделение";
+                branch2.textContent = "Второе отделение";
+                tel1.textContent = "+998 98 362 97 97";
+                tel2.textContent = "+998 71 289 00 69";
+                tel3.textContent = "+998 91 447 26 19";
+                tel4.textContent = "+998 99 937 03 27";
+            }
+        }
+    </script>
 </body>
 
 </html>
