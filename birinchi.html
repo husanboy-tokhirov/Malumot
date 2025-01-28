@@ -7,19 +7,78 @@
     <title>Mevalar</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .tushonka{
+        margin-left: 40px;
+    }
+</style>
 
 <body>
     <div class="container">
         <h1 style="display: flex; align-items: center; justify-content: center; flex-direction: column;" id="title">1-Ovqatlar</h1>
         <div class="menu">
             <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
-                <img width="280px" height="180px" src="./images/suyuk.jpeg" alt="Olma" class="food-image">
+                <img width="280px" height="180px" src="./images/ovqat2.svg" alt="Olma" class="food-image">
                 <h3 id="food-name"
-                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">
-                    Lag'mon</h3>
-                <strong
-                    id="narxi"
-                    style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Qaynatma sho'rva
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="220px" src="./images/ovqat4.svg" alt="Olma" class="food-image">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Mastava
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="220px" src="./images/ovqat3.svg" alt="Olma" class="food-image">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">No'xot sho'rva
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="220px" src="./images/ovqat1.svg" alt="Olma" class="food-image">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Teftel sho'rva
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="220px" src="./images/ovqat6.svg" alt="Olma" class="food-image">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Tovuq sho'rva
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="220px" src="./images/ovqat5.svg" alt="Olma" class="food-image">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Lag'mon
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="260px" src="./images/ovqat7.svg" alt="Olma" class="food-image">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Chuchvara
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
+                </strong>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="food-item">
+                <img width="280px" height="260px" src="./images/ovqat8.svg" alt="Olma" class="food-image tushonka">
+                <h3 id="food-name"
+                    style="text-align: center; font-size: 30px; font-weight: 900; margin: 0; margin-top: 10px;">Tushonka sho'rva
+                </h3>
+                <strong id="narxi"style="margin: 0; display: flex; align-items: center; justify-content: center; margin-top: 5px;">Narxi: 28.000
                 </strong>
             </div>
         </div>
@@ -29,9 +88,8 @@
     </div>
 
     <script>
-        // Tilni o'zgartirish va o'qish
         window.onload = function () {
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; // Tanlangan tilni olish
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; 
             updateContent(savedLanguage);
         };
 
@@ -43,7 +101,7 @@
 
             if (lang === 'uz') {
                 title.textContent = "1-Ovqatlar";
-                foodName.textContent = "Lag'mon";
+                foodName.textContent = "Qaynatma sho'rva";
                 contactLink.textContent = "Murojaat uchun";
                 narxi.textContent = "Narxi: 28.000";
             } else if (lang === 'ru') {
