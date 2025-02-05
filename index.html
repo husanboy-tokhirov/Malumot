@@ -10,9 +10,9 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: rgb(185, 146, 82);
-      background: linear-gradient(135deg, #224f7a);
+      background-color: #f0f0f0;
       color: #333;
+      overflow: hidden;
     }
 
     .container {
@@ -20,12 +20,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
-    .links {
-      margin-top: 20px;
+    .link {
+      margin-bottom: 10px;
     }
 
     .link {
@@ -41,6 +43,7 @@
       border-radius: 10px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s, box-shadow 0.2s;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     .link:hover {
@@ -48,56 +51,129 @@
       box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
     }
 
-    .section {
-      display: none;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-      text-align: center;
-      width: 150px;
-    }
-
-    .card img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    a {
-      font-size: 20px;
-      color: black;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-    }
     .language-selector {
       display: flex;
       align-items: center;
       gap: 15px;
+      margin-bottom: 0px;
+    }
+
+    .language-selector a {
+      font-size: 20px;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    #logo-container {
+      width: 220px;
+      height: 220px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #f3ec78, #af4261);
+      animation: gradientBG 15s ease infinite;
+    }
+
+    #logo {
+      width: 220px;
+      height: 220px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .animated-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(45deg, #f3ec78, #af4261);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    .particle {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .title{
+      margin: 0;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .wave {
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.3)" fill-opacity="1" d="M0,32L48,37.3C96,43,192,53,288,80C384,107,480,149,576,154.7C672,160,768,128,864,112C960,96,1056,96,1152,112C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x;
+      animation: wave 10s linear infinite;
+    }
+
+    .wave:nth-child(2) {
+      top: 10px;
+      opacity: 0.5;
+      animation: wave 7s linear reverse infinite;
+    }
+
+    .wave:nth-child(3) {
+      top: 20px;
+      opacity: 0.2;
+      animation: wave 4s linear infinite;
+    }
+
+    @keyframes wave {
+      0% {
+        background-position-x: 0;
+      }
+      100% {
+        background-position-x: 1440px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="animated-background">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
   <div class="container">
     <div class="language-selector">
         <a href="#" onclick="changeLanguage('uz')">🇺🇿 O'zbek</a>
         <a href="#" onclick="changeLanguage('ru')">🇷🇺 Русский</a>
     </div>
-    <h1 id="title">G'ijduvon Fayz</h1>
+    <div id="logo-container">
+      <img id="logo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fayz.jpg-WVhqKiFP0xKc9m6QSiPLIGifJzAVHw.jpeg" alt="G'ijduvon Fayz Logo">
+    </div>
+    <h1 class="title" id="title">G'ijduvon Fayz</h1>
     <h2 id="menu-title" style="margin: 0;">Menu</h2>
     <div class="links" id="links">
-      <a href="./birinchi.html" class="link" onclick="showSection('fruits')">1-Ovqatlar</a>
-      <a href="./ikkinchi.html" class="link" onclick="showSection('foods')">2-Ovqatlar</a>
-      <a href="./shashliklar.html" class="link" onclick="showSection('shashliklar')">Shashliklar</a>
-      <a href="./salatlar.html" class="link" onclick="showSection('salatlar')">Salatlar</a>
-      <a href="./contact.html" class="link" onclick="showSection('contact')">Murojaat uchun</a>
+      <a href="./birinchi.html" class="link">1-Ovqatlar</a>
+      <a href="./ikkinchi.html" class="link">2-Ovqatlar</a>
+      <a href="./shashliklar.html" class="link">Shashliklar</a>
+      <a href="./salatlar.html" class="link">Salatlar</a>
+      <a href="./contact.html" class="link">Murojaat uchun</a>
     </div>
   </div>
 
@@ -114,10 +190,12 @@
         links: ["1-Блюда", "2-Блюда", "Шашлыки", "Салаты", "Для связи"]
       }
     };
+
     function changeLanguage(lang) {
       localStorage.setItem('selectedLanguage', lang);
       updateContent(lang);
     }
+
     function updateContent(lang) {
       document.getElementById('title').textContent = translations[lang].title;
       document.getElementById('menu-title').textContent = translations[lang].menuTitle;
@@ -126,16 +204,54 @@
         links[index].textContent = text;
       });
     }
+
     window.onload = function () {
       const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; 
       updateContent(savedLanguage);
+      createParticles();
+      animateLogo();
     };
 
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.style.display = section.id === sectionId ? 'flex' : 'none';
+    function createParticles() {
+      const particlesContainer = document.querySelector('.animated-background');
+      const particleCount = 50;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.width = `${Math.random() * 5 + 2}px`;
+        particle.style.height = particle.style.width;
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.top = `${Math.random() * 100}vh`;
+        particlesContainer.appendChild(particle);
+
+        animateParticle(particle);
+      }
+    }
+
+    function animateParticle(particle) {
+      const duration = Math.random() * 20 + 10;
+      const keyframes = [
+        { transform: `translate(0, 0) scale(1)`, opacity: 0.2 },
+        { transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) scale(1.5)`, opacity: 0.6 },
+        { transform: `translate(0, 0) scale(1)`, opacity: 0.2 }
+      ];
+
+      particle.animate(keyframes, {
+        duration: duration * 1000,
+        iterations: Infinity,
+        easing: 'ease-in-out'
       });
+    }
+
+    function animateLogo() {
+      const logo = document.getElementById('logo');
+      setInterval(() => {
+        logo.style.transform = 'translate(-50%, -50%) scale(1.05) rotate(3deg)';
+        setTimeout(() => {
+          logo.style.transform = 'translate(-50%, -50%) scale(1) rotate(-3deg)';
+        }, 500);
+      }, 1000);
     }
   </script>
 </body>
