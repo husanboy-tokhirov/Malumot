@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,7 +107,7 @@
       pointer-events: none;
     }
 
-    .title{
+    .title {
       margin: 0;
     }
 
@@ -114,9 +115,11 @@
       0% {
         background-position: 0% 50%;
       }
+
       50% {
         background-position: 100% 50%;
       }
+
       100% {
         background-position: 0% 50%;
       }
@@ -146,12 +149,14 @@
       0% {
         background-position-x: 0;
       }
+
       100% {
         background-position-x: 1440px;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="animated-background">
     <div class="wave"></div>
@@ -160,11 +165,13 @@
   </div>
   <div class="container">
     <div class="language-selector">
-        <a href="#" onclick="changeLanguage('uz')">🇺🇿 O'zbek</a>
-        <a href="#" onclick="changeLanguage('ru')">🇷🇺 Русский</a>
+      <a href="#" onclick="changeLanguage('uz')">🇺🇿 O'zbek</a>
+      <a href="#" onclick="changeLanguage('ru')">🇷🇺 Русский</a>
     </div>
     <div id="logo-container">
-      <img id="logo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fayz.jpg-WVhqKiFP0xKc9m6QSiPLIGifJzAVHw.jpeg" alt="G'ijduvon Fayz Logo">
+      <img id="logo"
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fayz.jpg-WVhqKiFP0xKc9m6QSiPLIGifJzAVHw.jpeg"
+        alt="G'ijduvon Fayz Logo">
     </div>
     <h1 class="title" id="title">G'ijduvon Fayz</h1>
     <h2 id="menu-title" style="margin: 0;">Menu</h2>
@@ -206,7 +213,7 @@
     }
 
     window.onload = function () {
-      const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz'; 
+      const savedLanguage = localStorage.getItem('selectedLanguage') || 'uz';
       updateContent(savedLanguage);
       createParticles();
       animateLogo();
@@ -255,4 +262,5 @@
     }
   </script>
 </body>
+
 </html>
